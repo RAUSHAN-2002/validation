@@ -1,14 +1,18 @@
 package validationsppr.val.Entity;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter
+@Setter
 @Entity
 @Table(name = "employee")
 public class Employee {
   public String getEmail() {
     return email;
   }
-
+  //Employee  Entity
   public void setEmail(String email) {
     this.email = email;
   }
@@ -39,15 +43,26 @@ public class Employee {
 
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+  private Long id;
 
 
-    @Column(name = "name",nullable = false)
-    private String empName;
+  @Column(name = "name",nullable = false)
+  private String empName;
 
-    @Column(name ="email",nullable = false)
-    private String email;
+  @Column(name ="email",nullable = false)
+  private String email;
 
-    @Column(name = "phone",nullable = false)
-    private String phoneNo;
-}
+  @Column(name = "phone",nullable = false)
+  private String phoneNo;
+
+  public String getEmpRole() {
+    return empRole;
+  }
+
+  public void setEmpRole(String empRole) {
+    this.empRole = empRole;
+  }
+
+  @Column(name = "emprole",nullable = false)
+  private String empRole;
+  }

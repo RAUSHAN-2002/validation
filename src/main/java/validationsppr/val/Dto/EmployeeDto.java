@@ -9,6 +9,7 @@ public class EmployeeDto {
     private Long id;
 
     @NotBlank(message = "Name is required")
+    @Size(min = 20, max=40)
     private String empName;
 
     @NotBlank(message = "Email is required")
@@ -20,6 +21,8 @@ public class EmployeeDto {
     @NotBlank(message = "Phone number is required")
     @Size(min = 10, max = 10, message = "Phone number must be 10 digits")
     private String phoneNo;
+    @NotBlank(message = "empRole must be given")
+    private String empRole;
 
     // Constructors
     public EmployeeDto() {}

@@ -1,0 +1,12 @@
+[1mdiff --git a/src/main/java/validationsppr/val/Dto/EmployeeDto.java b/src/main/java/validationsppr/val/Dto/EmployeeDto.java[m
+[1mindex 21efa08..5949e6a 100644[m
+[1m--- a/src/main/java/validationsppr/val/Dto/EmployeeDto.java[m
+[1m+++ b/src/main/java/validationsppr/val/Dto/EmployeeDto.java[m
+[36m@@ -9,6 +9,7 @@[m [mpublic class EmployeeDto {[m
+     private Long id;[m
+ [m
+     @NotBlank(message = "Name is required")[m
+[32m+[m[32m    @Size(min = 20, max=40)[m
+     private String empName;[m
+ [m
+     @NotBlank(message = "Email is required")[m
