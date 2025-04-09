@@ -12,9 +12,11 @@ public class EmployeeDto {
     private String empName;
 
     @NotBlank(message = "Email is required")
+    @Size(min = 10 ,max = 15)
     @Email(message = "Email should be valid")
     private String email;
 
+    @Size(min = 9, max=10)
     @NotBlank(message = "Phone number is required")
     @Size(min = 10, max = 10, message = "Phone number must be 10 digits")
     private String phoneNo;
